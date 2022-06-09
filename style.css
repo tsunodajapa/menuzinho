@@ -1,0 +1,36 @@
+input {
+    display: none;
+}
+
+label {
+    height: 35px;
+    display: flex;
+    justify-content: space-between;
+    flex-direction: column;
+    transition: 0.6s;
+    cursor: pointer;
+}
+
+label div {
+    background: #000;
+    width: 40px;
+    height: 4px;
+    border-radius: 30px;
+    transition: 0.6s;
+}
+
+input:checked + label div:nth-child(2) {
+    opacity: 0;
+}
+
+input:checked + label div:nth-child(1) {
+    transform: rotate(-45deg) translateY(22px);
+}
+
+input:checked + label div:nth-child(3) {
+    transform: rotate(45deg) translateY(-22px);
+}
+
+input:checked + label {
+    transform: translateX(-20px);
+}
